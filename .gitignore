@@ -1,0 +1,6 @@
+*.py[cod]
+venv/
+pkg/
+__pycache__/
+.vscode/
+test.py
