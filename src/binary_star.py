@@ -5,10 +5,9 @@ import pandas as pd
 
 def ema_cross(df):
 
-    # df['EMA9'] 
-    # df['EMA12'] 
-    # df['EMA26']
-    # df['EMA100']
+    """
+    Verifies if emas crossed each other
+    """
 
     ema9_1 = df['EMA9'].iloc[-1]
     ema12_1 = df['EMA12'].iloc[-1] 
@@ -19,7 +18,6 @@ def ema_cross(df):
     ema9_3 = df['EMA9'].iloc[-3]
     ema12_3 = df['EMA12'].iloc[-3] 
     ema26_3 = df['EMA26'].iloc[-3]
-    cross = 0
 
     if (ema9_1 > ema12_1 and ema9_1 > ema26_1) and ((ema9_2 < ema12_2 and ema9_2 < ema26_2) or (ema9_3 < ema12_3 and ema9_3 < ema26_3)):
         return  1
@@ -31,15 +29,13 @@ def ema_cross(df):
 
 def adx_cross(df):
 
-    # df['ADX'] 
-    # df['minus']
-    # df['plus'] 
+    """
+    Verifies if ADX signals crossed each other
+    """
 
     plus_1 = df['plus'].iloc[-1]
     minus_1 = df['minus'].iloc[-1] 
     adx_1 = df['ADX'].iloc[-1]
-    
-    cross = 0
 
     if plus_1 > minus_1 and plus_1 > adx_1:
         return  1
@@ -50,11 +46,10 @@ def adx_cross(df):
 
 
 def macd_cross(df):
-
-    # df['MACD'] 
-    # df['MACD_signal']
-
-    cross = 0
+ 
+    """
+    Verifies if MACD crossed 0
+    """
 
     if df['MACD'].iloc[-1] > 0 and df['MACD'].iloc[-3]:
         return  1

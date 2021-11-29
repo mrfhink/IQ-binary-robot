@@ -23,10 +23,9 @@ while True:
         start = time.process_time()
         print('Getting indicators\n')
         for asset in assets.keys():
+
             goal_asset = iq.rename_data(api_iq.get_candles(
                 asset, CANDLE_TIME, CANDLE_NUMBER, time.time()))
-            
-            
             
             target_df = iq.get_indicators(goal_asset)
             
@@ -43,7 +42,9 @@ while True:
             if ema_cross == -1 and macd_cross == -1 and adx_cross == -1:
                 ID = api_iq.buy(1, asset, 'put', 3)
                 print('Selling: ', asset, ' ID: ', ID)
+
         print('Getting profits\n')
+        
         # Setting goals by profit
         assets = iq.load_goals(api_iq)
         timeToSleep = 60 - time.localtime().tm_sec - 1

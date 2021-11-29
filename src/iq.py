@@ -1,9 +1,6 @@
 import time
 import numpy as np
-from finta import TA
-import ta as tafin
 import pandas as pd
-from scipy.signal import savgol_filter
 
 def load_goals(iq):
     '''
@@ -46,19 +43,7 @@ def get_indicators(df, period_adx=14,
             period_fast = 12
             period_slow = 26
             signal = 9
-        SO:
-            period K = 14
-            periodD = 3
-            ob = 85
-            os = 15
-        CCI:
-            period = 14
-            window size = 5
-            poly order = 3
-            ob = 85
-            os = -85
-        BB:
-            period = 24
+
     '''
 
     # ADX Indicator
@@ -72,7 +57,6 @@ def get_indicators(df, period_adx=14,
     df['EMA9'] = TA.EMA(df, 9)
     df['EMA12'] = TA.EMA(df, 12)
     df['EMA26'] = TA.EMA(df, 26)
-    # df['EMA100'] = TA.EMA(df, 100)
 
     # MACD
     df['MACD'] = TA.MACD(df, period_fast, period_slow, signal)['MACD']
