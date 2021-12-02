@@ -1,6 +1,8 @@
 import time
 import numpy as np
 import pandas as pd
+import ta as tafin
+from finta import TA
 
 def load_goals(iq):
     '''
