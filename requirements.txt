@@ -5,7 +5,6 @@ cycler==0.11.0
 finta==1.3
 fonttools==4.28.2
 idna==3.3
-iqoptionapi==6.8.9.1
 isort==5.10.1
 joblib==1.1.0
 kiwisolver==1.3.2
@@ -22,8 +21,6 @@ pyparsing==3.0.6
 python-dateutil==2.8.2
 pytz==2021.3
 requests==2.26.0
-scikit-learn==1.0.1
-scipy==1.7.3
 setuptools-scm==6.3.2
 six==1.16.0
 ta==0.8.0
@@ -39,7 +36,7 @@ certifi==2021.10.8
 charset-normalizer==2.0.8
 finta==1.3
 idna==3.3
-iqoptionapi==6.8.9.1
+#iqoptionapi==6.8.9.1
 isort==5.10.1
 lazy-object-proxy==1.6.0
 mccabe==0.6.1
@@ -53,7 +50,6 @@ requests==2.26.0
 six==1.16.0
 ta==0.8.0
 toml==0.10.2
-typing_extensions==4.0.1
 urllib3==1.26.7
 websocket-client==0.56.0
 wrapt==1.13.3

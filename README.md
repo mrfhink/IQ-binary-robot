@@ -20,9 +20,9 @@ In order to work with IQ-Binary-Bot application I recommend you to create a virt
 
 1. Run `cd IQ-binary-bot`.
 
-2. Run `python install requirements.txt`.
+2. Run `pip install -r requirements.txt`.
 
-3. Make sure to install this package too [IQ Option API](https://github.com/Lu-Yi-Hsun/iqoptionapi).
+3. Make sure to install this package too [IQ Option API](https://github.com/iqoptionapi/iqoptionapi).
 
 ## Usage
 
