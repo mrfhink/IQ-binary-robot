@@ -1,7 +1,31 @@
 import pandas as pd
+from sklearn.linear_model import LinearRegression
 
 # TODO:
     # some way to calculate direction of the trend to open position in that direction only.
+
+def data_trend(df, candles, asset):
+    """
+    Verifies the trend of the asset
+    """
+
+    X = df['close'].values.reshape(-1, 1)
+    y = range(0,candles,1)
+
+    # Fit the linear regression model
+    model = LinearRegression()
+    model.fit(X, y)
+
+    # Get the slope and intercept
+    trend_slope = model.coef_[0]
+    trend_intercept = model.intercept_
+
+    if (trend_slope*candles+trend_intercept) > 0:
+        print(f"Asset {asset} have a positive trend")
+        return 1
+    else:
+        print(f"Asset {asset} have a negative trend")
+        return -1
 
 def ema_cross(df):
 

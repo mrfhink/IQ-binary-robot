@@ -30,7 +30,7 @@ Just run `python main.py` inside the `src` folder.
 
 ## TODO
 
-- Some way to calculate the asset's trend in order to open position in that direction only.
+- <s>Some way to calculate the asset's trend in order to open position in that direction only.</s>
 
 - A few more strategies and a way to select which one to use.
 
